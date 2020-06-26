@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core"
+             android:Application.WindowSoftInputModeAdjust="Resize"
+             mc:Ignorable="d"
+             x:Class="XF47.App">
+    <Application.Resources>
+
+         <!--<OnPlatform x:Key="FontAwesome"
+            Default="materialdesignicons-webfont.ttf"
+            x:TypeArguments="x:String"/>-->
+
+        <!-- Light colors -->
+        <Color x:Key="LightBackgroundColor">#ffffff</Color>
+        <Color x:Key="LightTitleColor">#ef3f6f</Color>
+        <Color x:Key="LightSubtitleColor">#999999</Color>
+        <Color x:Key="LightEntryBackgroundColor">#f3f3f3</Color>
+        <Color x:Key="LightLabelColor">#f6a6b9</Color>
+
+        <!-- Dark colors -->
+        <Color x:Key="DarkBackgroundColor">#090909</Color>
+        <Color x:Key="DarkTitleColor">#e63164</Color>
+        <Color x:Key="DarkSubtitleColor">#919191</Color>
+        <Color x:Key="DarkEntryBackgroundColor">#1f1f1f</Color>
+        <Color x:Key="DarkLabelColor">#972142</Color>
+
+        <!--Basic colors-->
+        <Color x:Key="ButtonBackgroundColor">#ee3368</Color>
+
+        <Style x:Key="MainGridStyle"
+               TargetType="Grid">
+            <Setter Property="BackgroundColor"
+                    Value="{AppThemeBinding Light={StaticResource LightBackgroundColor}, Dark={StaticResource DarkBackgroundColor}}" />
+        </Style>
+
+        <Style x:Key="TitleStyle"
+               TargetType="Label">
+            <Setter Property="TextColor"
+                    Value="{AppThemeBinding Light={StaticResource LightTitleColor}, Dark={StaticResource DarkTitleColor}}"/>
+        </Style>
+        <Style x:Key="SubtitleStyle"
+               TargetType="Label">
+            <Setter Property="TextColor"
+                    Value="{AppThemeBinding Light={StaticResource LightSubtitleColor}, Dark={StaticResource DarkSubtitleColor}}"/>
+        </Style>
+
+        <Style x:Key="EntryStyle"
+               TargetType="Entry">
+            <Setter Property="TextColor"
+                    Value="{AppThemeBinding Light={StaticResource LightSubtitleColor}, Dark={StaticResource DarkSubtitleColor}}"/>
+        </Style>
+
+        <Style x:Key="FrameStyle"
+               TargetType="Frame">
+            <Setter Property="BackgroundColor"
+                    Value="{AppThemeBinding Light={StaticResource LightEntryBackgroundColor}, Dark={StaticResource DarkEntryBackgroundColor}}"/>
+        </Style>
+
+        <Style x:Key="ButtonStyle"
+               TargetType="Button">
+            <Setter Property="BackgroundColor"
+                    Value="{StaticResource ButtonBackgroundColor}"/>
+        </Style>
+
+        <Style x:Key="SecondaryLabelStyle"
+               TargetType="Label">
+            <Setter Property="TextColor"
+                    Value="{AppThemeBinding Light={StaticResource LightLabelColor}, Dark={StaticResource DarkLabelColor}}"/>
+        </Style>
+
+        <Style x:Key="SpanFirstColor"
+               TargetType="Span">
+            <Setter Property="TextColor"
+                    Value="{AppThemeBinding Light={StaticResource LightSubtitleColor}, Dark={StaticResource DarkSubtitleColor}}"/>
+        </Style>
+
+        <Style x:Key="SpanSecondColor"
+               TargetType="Span">
+            <Setter Property="TextColor"
+                    Value="{AppThemeBinding Light={StaticResource LightLabelColor}, Dark={StaticResource DarkLabelColor}}"/>
+        </Style>
+    </Application.Resources>
+</Application>
